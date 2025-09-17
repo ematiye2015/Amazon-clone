@@ -1,0 +1,21 @@
+
+
+
+
+.hero_img {
+  position: relative;
+}
+
+/* Overlay gradient at bottom */
+.hero_img::before {
+  content: "";
+  position: absolute;
+  bottom: 0;              /* ✅ added missing semicolon before */
+  width: 100%;
+  height: 300px;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(225, 225, 225, 0),  /* ✅ remove extra U */
+    rgba(255, 255, 255, )   /* ✅ add alpha value */
+  );
+}
